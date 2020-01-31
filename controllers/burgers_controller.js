@@ -9,6 +9,8 @@ router.get("/", function(req, res){
         var hbsObject = {
             burger: data
         };
+    console.log("rendering handlebars page")
+    console.log(hbsObject)
     res.render("index", hbsObject)
     })
 })
@@ -19,12 +21,23 @@ router.post("/", function(req, res){
     })
 })
 
-router.update("/", function(req, res){
-    burger.update()
+router.put("/", function(req, res){
+    var condition = "id= " + req.params.id
+
+    burger.update({
+        devoured: true
+    },
+    condition, function(result){
+        res.send("Update successful")
+    })
 })
 
 router.delete("/", function(req, res){
+    var condition = "id= " + req.params.id
 
+    burger.delete(condition, function(result){
+        res.send("Delete successful")
+    })
 })
 
 module.exports = router

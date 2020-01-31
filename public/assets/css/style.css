@@ -1,0 +1,28 @@
+body {
+    background: lightsalmon;
+}
+
+header {
+    font-size: 32px;
+    text-align: center;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

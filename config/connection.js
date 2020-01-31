@@ -5,13 +5,14 @@ var connection = mysql.createConnection({
   port: 3306,
   user: "root",
   password: "beethoven",
-  database: "burgers_db"
+  database: "burger_db"
 });
 
 // Make connection.
 connection.connect(function(err) {
   if (err) {
     console.error("Error connecting to the database. Try again, coder");
+    console.log(err)
     return;
   }
   console.log("Connection to database has been established, coder");
