@@ -21,6 +21,29 @@ textarea {
     width: 50%;
 }
 
+.form-group {
+    text-align: center;
+}
+
+.devoured {
+    text-align: center;
+    opacity: 50%;
+}
+
+.notdevoured {
+    text-align: center;
+}
+
+.leftcontainer {
+    width: 50%;
+    float: left;
+}
+
+.rightcontainer {
+    width: 50%;
+    float: right;
+}
+
 button {
     display: block;
     margin-left: auto;

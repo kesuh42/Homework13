@@ -15,24 +15,28 @@ router.get("/", function(req, res){
     })
 })
 
-router.post("/", function(req, res){
-    burger.create(["burger_name", "devoured"], [req.body.name, req.body.devoured], function(result){
+router.post("/api/burger", function(req, res){
+    console.log("create running")
+    console.log(req.body)
+    burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result){
         res.send("Post successful")
     })
 })
 
-router.put("/", function(req, res){
+router.put("/api/burger/:id", function(req, res){
+    console.log("put running")
     var condition = "id= " + req.params.id
 
     burger.update({
-        devoured: true
+        devoured: 1
     },
     condition, function(result){
         res.send("Update successful")
     })
 })
 
-router.delete("/", function(req, res){
+router.delete("/api/burger/:id", function(req, res){
+    console.log("delete running")
     var condition = "id= " + req.params.id
 
     burger.delete(condition, function(result){
