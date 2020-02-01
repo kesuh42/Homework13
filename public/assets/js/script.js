@@ -1,5 +1,3 @@
-//CHANGE ALL OF THIS
-
 $(function() {
     $(".update").on("click", function(event) {
       var id = $(this).data("id");
@@ -21,7 +19,6 @@ $(function() {
     });
   
     $(".create").on("submit", function(event) {
-      // Make sure to preventDefault on a submit event.
       event.preventDefault();
   
       var newBurger = {
@@ -35,7 +32,6 @@ $(function() {
         data: newBurger
       }).then(
         function() {
-          console.log("created new cat");
           // Reload the page to get the updated list
           location.reload();
         }
@@ -43,7 +39,6 @@ $(function() {
     });
   
     $(".delete").on("click", function(event) {
-      console.log("delete running")
       var id = $(this).data("id");
   
       // Send the DELETE request.
@@ -51,7 +46,6 @@ $(function() {
         type: "DELETE"
       }).then(
         function() {
-          console.log("deleted cat", id);
           // Reload the page to get the updated list
           location.reload();
         }
