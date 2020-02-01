@@ -16,7 +16,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //Require the router stuff and use it
-var router = require("./controllers/burgers_Controller.js");
+var router = require("./controllers/burgers_controller.js");
 
 app.use(router);
 
